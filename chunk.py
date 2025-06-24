@@ -19,4 +19,5 @@ for file_path in directory_path.iterdir():
                 datai=data.iloc[i*chuncksize:min((i+1)*chuncksize,maxLen),:]
                 print(datai.shape, baseFileName,i)
                 # print(save_dir)
+                # datai_rounded=datai.round(3)
                 datai.to_csv(f'{material}/{baseFileName}_{i}.csv', index=False,header=False)
